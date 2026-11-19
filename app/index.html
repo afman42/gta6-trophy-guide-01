@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Ledger — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <p class="kicker">Grand Theft Auto VI · PlayStation 5 · Unofficial fan guide</p>
+  <h1>Leonida Ledger</h1>
+  <p class="subtitle">The complete trophy guide and tracker for GTA VI: every one of the 55 official trophies, a roadmap to the platinum, and the missables flagged before you pass them.</p>
+  <div class="progress-wrap" id="progressWrap">
+    <div class="progress-line"><span id="progressText">0 of 55 earned</span><span id="progressPct">0%</span></div>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+    <p class="grade-counts" id="gradeCounts"></p>
+  </div>
+</header>
+
+<nav class="tabs" id="tabs">
+  <button type="button" data-view="checklist" class="tab active">Checklist</button>
+  <button type="button" data-view="roadmap" class="tab">Roadmap to Platinum</button>
+  <button type="button" data-view="missables" class="tab">Missables <span class="pill" id="missableCount"></span></button>
+</nav>
+
+<section class="controls" id="controls">
+  <label class="control search">Search <input id="search" type="search" placeholder="Trophy name or word…" autocomplete="off"></label>
+  <label class="control">Grade
+    <select id="gradeFilter">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="control">Kind
+    <select id="kindFilter">
+      <option value="all">All kinds</option>
+      <option value="story">Story</option>
+      <option value="missable">Missable</option>
+      <option value="collectibles">Collectibles</option>
+      <option value="activities">Activities</option>
+      <option value="crime">Crime &amp; money</option>
+      <option value="online">Online</option>
+    </select>
+  </label>
+  <label class="check"><input id="spoilerToggle" type="checkbox"> Hide story spoilers</label>
+  <label class="check"><input id="earnedOnly" type="checkbox"> Earned only</label>
+  <button id="exportBtn" type="button">Export progress</button>
+  <label class="import-btn">Import progress <input id="importFile" type="file" accept="application/json"></label>
+  <button id="resetBtn" type="button">Reset</button>
+</section>
+
+<main>
+  <section id="view-checklist" class="view">
+    <div class="layout">
+      <div class="list-col">
+        <p class="list-note" id="listNote"></p>
+        <ul class="trophy-list" id="trophyList"></ul>
+      </div>
+      <aside class="detail-col" id="detailPane" aria-live="polite"></aside>
+    </div>
+  </section>
+
+  <section id="view-roadmap" class="view hidden">
+    <p class="view-intro">The road to the platinum, in the order to play it. Each stage lists the trophies it earns; story trophies cannot be missed by playing through, so do the missables while the moments are in front of you.</p>
+    <div id="roadmapStages"></div>
+  </section>
+
+  <section id="view-missables" class="view hidden">
+    <p class="view-intro">Fifteen trophies can be missed if the moment passes. They are built from the official descriptions: a mission, a challenge or a moment that only comes around once, or needs your partner beside you. Check this list before each play session.</p>
+    <div id="missableList"></div>
+  </section>
+</main>
+
+<footer>
+  <h2>Sources &amp; honesty note</h2>
+  <p>Every trophy's name, description and grade is the official PlayStation 5 list, as published by Exophase and PSNProfiles; PSNProfiles also supplied the progress target where a trophy has one. Each guide is written in this guide's own words from that official description. Where a description does not pin down a place or a step, the guide says so plainly — “not yet checked in the game” — instead of inventing a location.</p>
+  <p>This is an unofficial fan guide. It is not affiliated with, endorsed by, or connected to Rockstar Games or Sony. It works fully offline: it loads nothing from the network and saves your progress only in your own browser.</p>
+  <p id="offlineNote">Offline-ready · progress saved in this browser · export any time</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
